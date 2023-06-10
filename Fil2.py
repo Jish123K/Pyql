@@ -107,4 +107,36 @@ def solve_linear(a, b):
     else:
 
         return (-b / a,)
+def main():
+
+    # Get the user's name
+
+    name = input("What is your name? ")
+
+    # Create a list of numbers from 1 to 10
+
+    numbers = list(range(1, 11))
+
+    # Shuffle the list
+
+    random.shuffle(numbers)
+
+    # Get the user to guess a number
+
+    guess = int(input("Guess a number between 1 and 10: "))
+
+    # Check if the user's guess is correct
+
+    if guess == numbers[0]:
+
+        print("Congratulations, {}! You guessed the correct number!".format(name))
+
+    else:
+
+        print("Sorry, {}. The correct number was {}.".format(name, numbers[0]))
+
+if __name__ == "__main__":
+
+    main()
+
 
